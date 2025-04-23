@@ -46,6 +46,16 @@ Response
 OK
 ```
 
+## Get State
+
+```bash
+# Raw output
+curl "$BALENA_SUPERVISOR_ADDRESS/v2/applications/state?apikey=$BALENA_SUPERVISOR_API_KEY"
+
+# Or use jq to format:
+curl "$BALENA_SUPERVISOR_ADDRESS/v2/applications/state?apikey=$BALENA_SUPERVISOR_API_KEY" | jq '.'
+```
+
 ## Stop Service
 
 ```bash

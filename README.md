@@ -66,6 +66,14 @@ Response:
 "applied"
 ```
 
+Get the state of a service called `web-app`:
+
+```bash
+curl -s "$BALENA_SUPERVISOR_ADDRESS/v2/state/status?
+apikey=$BALENA_SUPERVISOR_API_KEY" | jq '.containers[] | select(.serviceName
+ == "web-app") | .status'
+```
+
 ## Stop Service
 
 ```bash

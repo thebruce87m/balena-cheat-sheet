@@ -56,6 +56,16 @@ curl "$BALENA_SUPERVISOR_ADDRESS/v2/state/status?apikey=$BALENA_SUPERVISOR_API_K
 curl "$BALENA_SUPERVISOR_ADDRESS/v2/state/status?apikey=$BALENA_SUPERVISOR_API_KEY" | jq '.'
 ```
 
+Get the `appState` directly:
+```bash
+curl "$BALENA_SUPERVISOR_ADDRESS/v2/state/status?apikey=$BALENA_SUPERVISOR_API_KEY" | jq '.appState'
+```
+
+Response:
+```bash
+"applied"
+```
+
 ## Stop Service
 
 ```bash

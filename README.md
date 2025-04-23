@@ -31,3 +31,17 @@ Push build locally
 # Change name to detected device
 balena push 63ec46c.local
 ```
+
+
+# API
+
+Ping supervisor
+```bash
+curl -X GET --header "Content-Type:application/json" \
+"$BALENA_SUPERVISOR_ADDRESS/ping"
+```
+
+Response
+```bash
+OK
+```
